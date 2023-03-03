@@ -2,7 +2,7 @@
 '''
 A simple program for measuring the runtime of sorting algorithms.
 '''
-
+from prettytable import PrettyTable
 import timeit
 import random
 
@@ -19,7 +19,11 @@ if __name__ == '__main__':
     parser.add_argument('--max_x', type=int, default=0)
     parser.add_argument('--input', choices=['sorted', 'random'], default='random')
     args = parser.parse_args()
-
+    
+    print('''+-----------------------------+----------------------------------+----------------------------+ 
+|       timsort               |        merge_sorted              |      quick_sorted          | 
++-----------------------------+----------------------------------+----------------------------+''')
+ 
     # perform the runtime tests
     for x in range(0, args.max_x+1):
 
@@ -44,7 +48,6 @@ if __name__ == '__main__':
         runtimes['timsort'] = timeit.timeit(lambda: sorted(xs), number=1)
         runtimes['merge_sorted'] = timeit.timeit(lambda: merge_sorted(xs), number=1)
         runtimes['quick_sorted'] = timeit.timeit(lambda: quick_sorted(xs), number=1)
-
         # display the runtimes
         # FIXME 1:
         # Modify the print statement below so that a nice looking markdown table is printed.
@@ -52,4 +55,7 @@ if __name__ == '__main__':
         # You will have to look up how to do this formatting.
         # In order to get a proper markdown table,
         # you will have to also print a header line somewhere else.
-        print(f'len(xs)=2**{x} runtimes={runtimes}')
+
+   
+        print(f"|         {runtimes['timsort'] :0.2e}            |           {runtimes['merge_sorted']: 0.2e}              |        {runtimes['quick_sorted']}|")
+       

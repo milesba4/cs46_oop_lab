@@ -2,7 +2,6 @@
 '''
 A simple program for measuring the runtime of sorting algorithms.
 '''
-from prettytable import PrettyTable
 import timeit
 import random
 

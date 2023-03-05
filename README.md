@@ -232,31 +232,8 @@ Follow the instructions in the comments to provide a proper definition of `xs`,
 then rerun the command above to generate a markdown table of runtimes.
 Copy/paste the table into the README file below this line.
 
-|       timsort               |        merge_sorted              |      quick_sorted           |         
-|-----------------------------|----------------------------------|-----------------------------|
-|         2.70e-06            |            1.71e-06              |        1.687556505203247e-06|
-|         1.92e-06            |            6.33e-06              |        1.5001744031906128e-05|
-|         1.73e-06            |            1.17e-05              |        1.7564743757247925e-05|
-|         1.84e-06            |            2.20e-05              |        4.3526291847229004e-05|
-|         1.99e-06            |            4.43e-05              |        6.85565173625946e-05|
-|         2.09e-06            |            9.35e-05              |        0.00014618411660194397|
-|         3.00e-06            |            2.01e-04              |        0.00033541396260261536|
-|         4.45e-06            |            4.38e-04              |        0.0007347315549850464|
-|         6.96e-06            |            9.46e-04              |        0.0016197003424167633|
-|         1.25e-05            |            2.03e-03              |        0.00413532555103302|
-|         2.21e-05            |            4.40e-03              |        0.007945436984300613|
-|         4.34e-05            |            9.58e-03              |        0.017727959901094437|
-|         9.42e-05            |            2.02e-02              |        0.03815951570868492|
-|         2.01e-04            |            4.33e-02              |        0.06500614061951637|
-|         2.53e-04            |            5.24e-02              |        0.09513470903038979|
-|         5.51e-04            |            1.12e-01              |        0.19885709881782532|
-|         9.01e-04            |            2.30e-01              |        0.4261885806918144|
-|         1.96e-03            |            4.85e-01              |        0.905407078564167|
-|         4.22e-03            |            1.03e+00              |        1.9720676504075527|
-|         9.19e-03            |            2.12e+00              |        5.160658612847328|
-|         2.21e-02            |            5.05e+00              |        9.727941893041134|
-|         4.46e-02            |            1.06e+01              |        20.43328609317541|
-|         9.10e-02            |            2.21e+01              |        43.31007580459118|
+<!-- add the table here -->
+
 You should notice that the built-in `sorted` function ran much faster on this input,
 but your `merge_sorted` and `quick_sorted` functions have essentially the same runtimes.
 This is because TimSort is designed to not have to resort already sorted data,
